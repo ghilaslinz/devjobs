@@ -1,0 +1,22 @@
+.header_background{
+    background-image: url("./assets/desktop/header.svg");
+    background-repeat: no-repeat;
+    width: 100vw;
+    height :200px;
+    background-color: #F2F2F2;
+    /*height: 450px;*/
+   
+
+}
+.header_container{
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    
+
+
+}
+.container{
+    margin-top : 0px !important;
+}
