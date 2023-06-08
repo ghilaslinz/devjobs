@@ -14,7 +14,7 @@ To set up this project locally, follow the instructions below:
 git clone https://github.com/ghilaslinz/devjobs.git
 cd devjobs
 npm install
-
+\```
 
 ## Contributing
 
