@@ -8,6 +8,7 @@ import JobsPage from './JobsPage';
 function Home() {
   return (
     <div className=''>
+  
      <Header />
      <JobsPage />
      

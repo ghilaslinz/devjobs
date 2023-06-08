@@ -4,6 +4,18 @@ import './JobsDetails.css';
 import Card from 'react-bootstrap/Card';
 import Header from './Header';
 import firebase from './firebase';
+import logo_scoot from './assets/logos/scoot.svg';
+import logo_blogr from './assets/logos/blogr.svg';
+import logo_coffeeroasters from './assets/logos/coffeeroasters.svg';
+import logo_creative from './assets/logos/creative.svg';
+import logo_crowdfund from './assets/logos/crowdfund.svg';
+import logo_maker from './assets/logos/maker.svg';
+import logo_mastercraft from './assets/logos/mastercraft.svg';
+import logo_officelite from './assets/logos/officelite.svg';
+import logo_pod from './assets/logos/pod.svg';
+import logo_pomodoro from './assets/logos/pomodoro.svg';
+import logo_typemaster from './assets/logos/typemaster.svg';
+import logo_vector from './assets/logos/vector.svg';
 import { Link, useHistory, useParams } from "react-router-dom";
 function JobDetails() {
   const [jobsDetails, setJobsDetails] = useState([]);
@@ -16,7 +28,20 @@ function JobDetails() {
     }
     return path.startsWith('./') ? path.slice(1) : path;
   }
-  
+  const logos = {
+    "scoot": logo_scoot,
+    "blogr": logo_blogr,
+    "coffeeroasters": logo_coffeeroasters,
+    "creative": logo_creative,
+    "crowdfund": logo_crowdfund,
+    "maker": logo_maker,
+    "mastercraft": logo_mastercraft,
+    "office lite": logo_officelite,
+    "pod": logo_pod,
+    "pomodoro": logo_pomodoro,
+    "typemaster": logo_typemaster,
+    "vector": logo_vector,
+  };
 
 
   useEffect(() => {
@@ -42,7 +67,8 @@ function JobDetails() {
       <Card  className="card mb-3 ">
         <div  className="row no-gutters align-items-center ">
           <div style={{ maxWidth: '140px', width: '100%' }}  className="col-12 col-md-4 text-center center-image-mobile">
-          <img style={{  borderRadius:'10px',padding:'8px', background :`${jobsDetails.logoBackground}`  }} src={fixImagePath(jobsDetails.logo)} className="card-img pt-3 pt-md-1" alt="Logo" />
+          <img style={{ borderRadius:'10px', padding:'8px', background: `${jobsDetails.logoBackground}` }} src={jobsDetails.company && logos[jobsDetails.company.toLowerCase()]} className="card-img pt-3 pt-md-1" alt="Logo" />
+
 
           </div>
 

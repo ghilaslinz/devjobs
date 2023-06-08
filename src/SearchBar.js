@@ -19,7 +19,7 @@ function SearchBar({ searchText, setSearchText, locationText, setLocationText, f
          value={searchText}
          onChange={(e) => setSearchText(e.target.value)}
         style={{backgroundColor:'#fff', border:'0px'}}
-         placeholder="Filter by title, companies, expertise…"
+         placeholder="Filter by company"
         />
         </InputGroup>
      </Col>
@@ -33,16 +33,19 @@ function SearchBar({ searchText, setSearchText, locationText, setLocationText, f
        style={{backgroundColor:'#fff', border:'0px'}} 
        type="text"
         placeholder="Filter by location…" />
+        
       </InputGroup>
       </Col>
       <Col xs={12} md={4}>
-      <InputGroup  className='d-flex align-items-center justify-content-around'>
+      <InputGroup  className="w-max">
        
       <Form.Check 
       label="Full Time Only"
       checked={fullTimeOnly}
-      onChange={(e) => setFullTimeOnly(e.target.checked)} /> 
-      <Button>Search</Button>
+      onChange={(e) => setFullTimeOnly(e.target.checked)} 
+      style={{marginTop : '5px'}}
+     /> 
+      <Button style={{display:'none'}}>Search</Button>
    
 
       </InputGroup>
