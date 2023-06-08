@@ -10,11 +10,17 @@ Our user-friendly interface allows users to explore a vast array of job postings
 
 To set up this project locally, follow the instructions below:
 
-```bash
+```
 git clone https://github.com/ghilaslinz/devjobs.git
 cd devjobs
 npm install
-\```
+```
+
+Start the development server by running:
+
+```
+npm start
+```
 
 ## Contributing
 
